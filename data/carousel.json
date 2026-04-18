@@ -1,0 +1,4 @@
+[
+  { "id": 1, "image": "/images/macreat/07-Biomass-Pellet-Line.jpg", "title": "Welcome to Macreat", "title_en": "Welcome to Macreat", "link": "/", "enabled": true, "sort_order": 1 },
+  { "id": 2, "image": "/images/macreat/07-Wood-Pellet-Mill-Production-Line-2.jpg", "title": "Biomass Pellet Machine", "title_en": "Biomass Pellet Machine", "link": "/product/biomass-pellet-machine", "enabled": true, "sort_order": 2 }
+]

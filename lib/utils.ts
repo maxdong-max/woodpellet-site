@@ -1,0 +1,85 @@
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
+// i18n translations
+export const translations = {
+  en: {
+    dashboard: "Dashboard",
+    products: "Products",
+    cases: "Cases",
+    news: "News",
+    faq: "FAQ",
+    carousel: "Carousel",
+    navigation: "Navigation",
+    settings: "Settings",
+    analytics: "Analytics",
+    login: "Login",
+    logout: "Logout",
+    save: "Save",
+    cancel: "Cancel",
+    delete: "Delete",
+    edit: "Edit",
+    add: "Add",
+    search: "Search",
+    actions: "Actions",
+    title: "Title",
+    content: "Content",
+    image: "Image",
+    status: "Status",
+    active: "Active",
+    inactive: "Inactive",
+    confirm: "Confirm",
+    success: "Success",
+    error: "Error",
+    loading: "Loading...",
+    noData: "No data",
+    total: "Total",
+    views: "Views",
+    today: "Today",
+    thisWeek: "This Week",
+    thisMonth: "This Month",
+  },
+  zh: {
+    dashboard: "仪表盘",
+    products: "产品",
+    cases: "案例",
+    news: "新闻",
+    faq: "常见问题",
+    carousel: "轮播图",
+    navigation: "导航管理",
+    settings: "设置",
+    analytics: "数据分析",
+    login: "登录",
+    logout: "退出",
+    save: "保存",
+    cancel: "取消",
+    delete: "删除",
+    edit: "编辑",
+    add: "添加",
+    search: "搜索",
+    actions: "操作",
+    title: "标题",
+    content: "内容",
+    image: "图片",
+    status: "状态",
+    active: "启用",
+    inactive: "禁用",
+    confirm: "确认",
+    success: "成功",
+    error: "错误",
+    loading: "加载中...",
+    noData: "暂无数据",
+    total: "总计",
+    views: "浏览量",
+    today: "今日",
+    thisWeek: "本周",
+    thisMonth: "本月",
+  }
+}
+
+export type Lang = 'en' | 'zh'
+export type TranslationKey = keyof typeof translations.en

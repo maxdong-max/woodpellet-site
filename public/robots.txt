@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://workspace-shrimp-publish.vercel.app/sitemap.xml

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "skills": {
+    "social-media-agent": {
+      "version": "1.0.0",
+      "installedAt": 1775737780922
+    },
+    "telegram-bot": {
+      "version": "1.0.0",
+      "installedAt": 1775738019977
+    },
+    "vibe-coding": {
+      "version": "1.0.0",
+      "installedAt": 1775742513056
+    },
+    "x-api": {
+      "version": "0.1.0",
+      "installedAt": 1775817908055
+    }
+  }
+}
