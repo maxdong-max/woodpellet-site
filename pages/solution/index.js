@@ -78,7 +78,7 @@ const getRecommendation = (mat, moist, cap) => {
     line: lineSlug,
     equipment: [...prepEquipment, millSlug, 'cooler-machine', 'packing-machine'],
     dryer: dryingNeeded ? dryerType : null,
-    note: \`Based on \${matName} (\${moistRange} moisture) and \${capName}, we recommend the following configuration.\`
+    note: 'Based on ' + matName + ' (' + moistRange + ' moisture) and ' + capName + ', we recommend the following configuration.'
   };
 };
 
@@ -131,7 +131,7 @@ export default function Solution() {
                 <div className="config-flow">
                   <div className="step-indicator">
                     <span>Guided Configuration: Step {configStep + 1} of 3</span>
-                    <div className="progress-bar"><div className="progress-fill" style={{ width: \`\${((configStep + 1) / 3) * 100}%\` }}></div></div>
+                    <div className="progress-bar"><div className="progress-fill" style={{ width: ((configStep + 1) / 3) * 100 + '%' }}></div></div>
                   </div>
 
                   {configStep === 0 && (
@@ -139,7 +139,7 @@ export default function Solution() {
                       <h2 style={{textAlign: 'center', marginBottom: '15px'}}>What is your raw material?</h2>
                       <div className="config-options">
                         {RECOMMENDATION_MATRIX.materials.map(m => (
-                          <button key={m.id} className={\`option-btn \${config.mat === m.id ? 'active' : ''}\`} onClick={() => handleNext('mat', m.id)}>{m.name}</button>
+                          <button key={m.id} className={"option-btn " + (config.mat === m.id ? 'active' : '')} onClick={() => handleNext('mat', m.id)}>{m.name}</button>
                         ))}
                       </div>
                     </div>
@@ -151,7 +151,7 @@ export default function Solution() {
                       <p className="guide-text" style={{textAlign: 'center', color: '#666', marginBottom: '20px'}}>Select the description that best matches your material's current state:</p>
                       <div className="config-options">
                         {RECOMMENDATION_MATRIX.moistureGuides[config.mat]?.map(m => (
-                          <button key={m.id} className={\`option-btn \${config.moist === m.id ? 'active' : ''}\`} onClick={() => handleNext('moist', m.id)}>
+                          <button key={m.id} className={"option-btn " + (config.moist === m.id ? 'active' : '')} onClick={() => handleNext('moist', m.id)}>
                             <span className="desc">{m.desc}</span>
                             <span className="range">{m.range}</span>
                           </button>
@@ -165,7 +165,7 @@ export default function Solution() {
                       <h2 style={{textAlign: 'center', marginBottom: '15px'}}>Desired production capacity?</h2>
                       <div className="config-options">
                         {RECOMMENDATION_MATRIX.capacity.map(m => (
-                          <button key={m.id} className={\`option-btn \${config.cap === m.id ? 'active' : ''}\`} onClick={() => handleNext('cap', m.id)}>{m.name}</button>
+                          <button key={m.id} className={"option-btn " + (config.cap === m.id ? 'active' : '')} onClick={() => handleNext('cap', m.id)}>{m.name}</button>
                         ))}
                       </div>
                     </div>
@@ -176,19 +176,19 @@ export default function Solution() {
                   <h2 style={{textAlign: 'center'}}>Your Recommended Solution</h2>
                   <div className="result-highlight" style={{ background: '#f0fff4', border: '1px solid #c6f6d0', padding: '20px', borderRadius: '12px', textAlign: 'center', marginBottom: '20px' }}>
                     <p className="result-note" style={{ fontSize: '1.1rem', marginBottom: '15px' }}>{result.note}</p>
-                    <Link href={\`/product/\${result.line}\`} className="btn btn-primary">View Production Line →</Link>
+                    <Link href={"/product/" + result.line} className="btn btn-primary">View Production Line →</Link>
                   </div>
                   <div className="equipment-list" style={{ textAlign: 'left', marginBottom: '20px' }}>
                     <h3 style={{ marginBottom: '10px', borderLeft: '4px solid #2ecc71', paddingLeft: '10px' }}>Key Components:</h3>
                     <div className="equipment-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
                       {result.equipment.map((eq, idx) => (
-                        <Link key={idx} href={\`/product/\${eq}\`} className="eq-item" style={{ display: 'flex', alignItems: 'center', padding: '10px', background: '#f8f9fa', borderRadius: '8px', textDecoration: 'none', color: '#555', border: '1px solid #eee', fontSize: '0.85rem' }}>
+                        <Link key={idx} href={"/product/" + eq} className="eq-item" style={{ display: 'flex', alignItems: 'center', padding: '10px', background: '#f8f9fa', borderRadius: '8px', textDecoration: 'none', color: '#555', border: '1px solid #eee', fontSize: '0.85rem' }}>
                           <span style={{ marginRight: '10px' }}>⚙️</span>
                           <span>{eq.replace(/-/g, ' ').toUpperCase()}</span>
                         </Link>
                       ))}
                       {result.dryer && (
-                        <Link href={\`/product/\${result.dryer}\`} className="eq-item" style={{ display: 'flex', alignItems: 'center', padding: '10px', background: '#fff5f5', borderRadius: '8px', textDecoration: 'none', color: '#c53030', border: '1px solid #feb2b2', fontSize: '0.85rem' }}>
+                        <Link href={"/product/" + result.dryer} className="eq-item" style={{ display: 'flex', alignItems: 'center', padding: '10px', background: '#fff5f5', borderRadius: '8px', textDecoration: 'none', color: '#c53030', border: '1px solid #feb2b2', fontSize: '0.85rem' }}>
                           <span style={{ marginRight: '10px' }}>🔥</span>
                           <span>TRIPLE PASS DRYER</span>
                         </Link>
@@ -214,7 +214,7 @@ export default function Solution() {
                   <div 
                     className="solution-image"
                     style={item.image ? {
-                      backgroundImage: \`url(\${item.image})\`,
+                      backgroundImage: 'url(' + item.image + ')',
                       backgroundSize: 'cover',
                       backgroundPosition: 'center'
                     } : {}}
@@ -244,7 +244,7 @@ export default function Solution() {
                   <div 
                     className="material-image"
                     style={item.image ? {
-                      backgroundImage: \`url(\${item.image})\`,
+                      backgroundImage: 'url(' + item.image + ')',
                       backgroundSize: 'cover',
                       backgroundPosition: 'center'
                     } : {}}
