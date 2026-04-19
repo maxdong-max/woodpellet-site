@@ -55,6 +55,36 @@ export default function Home() {
       <main id="main">
         <HeroSection hero={hero} />
 
+        {/* Smart Configurator Quick Access */}
+        <section className="config-quick-access" style={{ padding: '20px 0', background: '#fcfcfc' }}>
+          <div className="container">
+            <div className="config-cta-wrapper" style={{ 
+              textAlign: 'center', 
+              padding: '25px', 
+              background: '#f0fff4', 
+              border: '2px solid #2ecc71', 
+              borderRadius: '16px',
+              boxShadow: '0 8px 20px rgba(46, 204, 113, 0.15)' 
+            }}>
+              <h3 style={{ color: '#2d5a5a', marginBottom: '12px', fontSize: '1.3rem', fontWeight: 'bold' }}>
+                Not sure which machine fits your specific material?
+              </h3>
+              <Link href="/solution" className="btn btn-primary" style={{ 
+                backgroundColor: '#2ecc71', 
+                color: 'white', 
+                padding: '14px 28px', 
+                borderRadius: '8px', 
+                textDecoration: 'none', 
+                fontWeight: 'bold',
+                display: 'inline-block',
+                fontSize: '1rem'
+              }}>
+                ➔ Try Smart Configuration Guide
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Exhibition Banner Section */}
         {exhibition && exhibition.enabled && (
         <section className="exhibition-banner"
@@ -80,30 +110,6 @@ export default function Home() {
         {/* Materials Section */}
         <section className="materials-section">
           <div className="container">
-            <div className="config-cta-wrapper" style={{ 
-              textAlign: 'center', 
-              marginBottom: '30px', 
-              padding: '20px', 
-              background: '#f0fff4', 
-              border: '1px solid #c6f6d0', 
-              borderRadius: '12px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.05)' 
-            }}>
-              <h3 style={{ color: '#2d5a5a', marginBottom: '10px', fontSize: '1.2rem' }}>
-                Not sure which machine fits your specific material?
-              </h3>
-              <Link href="/configurator" className="btn btn-primary" style={{ 
-                backgroundColor: '#2ecc71', 
-                color: 'white', 
-                padding: '12px 24px', 
-                borderRadius: '8px', 
-                textDecoration: 'none', 
-                fontWeight: 'bold',
-                display: 'inline-block'
-              }}>
-                ➔ Start Smart Configuration Guide
-              </Link>
-            </div>
             <h2>{materials.title}</h2>
             <p className="section-subtitle">{materials.subtitle}</p>
             <div className="materials-grid">
