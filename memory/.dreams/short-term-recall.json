@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-19T08:14:53.399Z",
+  "entries": {
+    "memory:memory/2026-04-05.md:1:26": {
+      "key": "memory:memory/2026-04-05.md:1:26",
+      "path": "memory/2026-04-05.md",
+      "startLine": 1,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "# 2026-04-05 工作日志 ## 今日完成 ### 页面修改任务 1. **straw-pelletizing-production-line** (`/zh/solution/`) - 匹配线上版本布局，保留原文字图片 - 使用线上图片：overview、process、Triple Pass Dryer 2. **biomass-fuel-pellet-production-with-rice-husk** (`/zh/solution/`) - 添加了 Process Steps、Equipment、Customer Case 等区块 - 使用线上图片：3台设备图片、客户案例图片 3. **fully-automatic-feed-pellet-production-line** (`/zh/product/`) - 添加了 Flowchart、Process Steps、Advantages、FAQ、About、Why Choose 区块 - 使用线上图片：overview、flowchart、why choose 图标 ## 技术要点 - 通过 web_fetch 获取线上页面结构 - 使用 exec + grep/sed 查找精确文本位置 - edit 工具需要精确匹配文本（包括空白符） - 图片 URL 需要验证返回 200 ## 注意事项 - 严格遵守 MEMORY.md 安全准则：仅操作专属目录，不访问敏感数据 - 任何文件操作前需先确认权限",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-19T08:14:53.399Z",
+      "lastRecalledAt": "2026-04-19T08:14:53.399Z",
+      "queryHashes": [
+        "c02c5fc940f1"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "zh/solution",
+        "zh/product",
+        "web-fetch",
+        "grep/sed",
+        "memory.md",
+        "工作",
+        "日志",
+        "今日"
+      ]
+    },
+    "memory:memory/2026-04-06.md:1:22": {
+      "key": "memory:memory/2026-04-06.md:1:22",
+      "path": "memory/2026-04-06.md",
+      "startLine": 1,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "# 2026-04-06 工作日志 ## 网站迁移项目 (macreat.com → Vercel) ### 完成项 - ✅ SEO配置 (lib/seo.js) - 改为新站URL - ✅ 图片URL - 73处替换为本地路径 `/images/macreat/` - ✅ Footer链接 - 12个改为相对路径 - ✅ 新闻详情页 - 创建 `pages/news/[slug].js` 支持多语言 (en/zh/id) - ✅ 中文/印尼文翻译添加 ### 技术细节 - 新部署: `https://workspace-shrimp-publish.vercel.app` - 本地图片目录: `public/images/macreat/` (78个文件) - Next.js 多语言路由: `/zh/news/...`, `/id/news/...` - 新闻详情页同时生成3个语言版本 ### 待处理 - 用户待验证新闻页多语言访问 ### 联系方式 (保留) - pellet@macreat.com - 正常业务联系方式",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-19T08:14:53.399Z",
+      "lastRecalledAt": "2026-04-19T08:14:53.399Z",
+      "queryHashes": [
+        "c02c5fc940f1"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "macreat.com",
+        "lib/seo.js",
+        "images/macreat",
+        "pages/news",
+        "en/zh/id",
+        "中文/印尼文翻译添加",
+        "public/images/macreat",
+        "next.js"
+      ]
+    },
+    "memory:memory/2026-04-10.md:1:24": {
+      "key": "memory:memory/2026-04-10.md:1:24",
+      "path": "memory/2026-04-10.md",
+      "startLine": 1,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "# 2026-04-10 工作日志 ## 项目状态 ### 本地网站 - 框架: Next.js - 运行命令: `npm run dev` - 目录: `/Users/openclaw/.openclaw/workspace-shrimp-publish` ### Git 状态 - 分支: main - 领先 origin/main: 2 commits (未推送到远程) - 未跟踪文件: `.clawhub/`, `skills/` ### Vercel 部署 - 项目名: workspace-shrimp-publish - Project ID: prj_OusdARU9yi3KRjgVO8FmRysyYWmp - Org ID: team_MMzyxuXset0vIveCQ5KaxKMG - 构建命令: npm run build - 输出目录: .next - 框架: nextjs - 生产环境: https://workspace-shrimp-publish.vercel.app - 后台: https://workspace-shrimp-publish.vercel.app/admin - 部署时间: 2026-04-10 16:30",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-19T08:14:53.399Z",
+      "lastRecalledAt": "2026-04-19T08:14:53.399Z",
+      "queryHashes": [
+        "c02c5fc940f1"
+      ],
+      "recallDays": [
+        "2026-04-19"
+      ],
+      "conceptTags": [
+        "next.js",
+        "users/openclaw",
+        "origin/main",
+        "workspace-shrimp-publish",
+        "prj-ousdaru9yi3krjgvo8fmrysyywmp",
+        "team-mmzyxuxset0vivecq5kaxkmg",
+        "工作",
+        "日志"
+      ]
+    }
+  }
+}

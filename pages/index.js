@@ -80,9 +80,34 @@ export default function Home() {
         {/* Materials Section */}
         <section className="materials-section">
           <div className="container">
+            <div className="config-cta-wrapper" style={{ 
+              textAlign: 'center', 
+              marginBottom: '30px', 
+              padding: '20px', 
+              background: '#f0fff4', 
+              border: '1px solid #c6f6d0', 
+              borderRadius: '12px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.05)' 
+            }}>
+              <h3 style={{ color: '#2d5a5a', marginBottom: '10px', fontSize: '1.2rem' }}>
+                Not sure which machine fits your specific material?
+              </h3>
+              <Link href="/configurator" className="btn btn-primary" style={{ 
+                backgroundColor: '#2ecc71', 
+                color: 'white', 
+                padding: '12px 24px', 
+                borderRadius: '8px', 
+                textDecoration: 'none', 
+                fontWeight: 'bold',
+                display: 'inline-block'
+              }}>
+                ➔ Start Smart Configuration Guide
+              </Link>
+            </div>
             <h2>{materials.title}</h2>
             <p className="section-subtitle">{materials.subtitle}</p>
             <div className="materials-grid">
+
               {materials.items.map((item, idx) => (
                 <Link key={idx} href={item.href} className="material-card">
                   <div 
