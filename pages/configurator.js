@@ -1,3 +1,4 @@
+// Deploy trigger: 2026-04-19 17:20
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
